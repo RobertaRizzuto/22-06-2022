@@ -7,6 +7,21 @@ function showElement(element, index, array) {
 }
 const voidConstant = array1.forEach(showElement);
 
+
+//esercizio2 fare un console.log() di ogni elemento, dopo un set timeout di (elemento * index)
+const showTimedList = () => {
+  
+
+  array1.forEach((element, index) => {
+    setTimeout(() => {
+      console.log(element);
+    }, 1000 * element * index);
+ 
+  });
+};
+showTimedList();
+
+
 //esercizio3 tenere dentro l'array1 solo i numeri pari
 function showEvenNumbers(element, index, array) {
   return element % 2 === 0;
@@ -28,21 +43,4 @@ function filterFn2(element, index, array) {
 const showCommonNumbers2 = array1.filter(filterFn2);
 console.log(showCommonNumbers2);
 
-// fare un console.log() di ogni elemento, dopo un set timeout di (elemento * index)
-// risultato: dopo 0s: console.log(1)
-//            dopo 1s: console.log(2)
-//            dopo 2s: console.log(3)
 
-
-
-const showTimedList = () => {
-  let timer = 0;
-
-  array1.forEach((element, index) => {
-    setTimeout(() => {
-      console.log(element);
-    }, timer);
-    timer = timer + 1000 * (index+1);
-  });
-};
-showTimedList();
