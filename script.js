@@ -5,7 +5,7 @@ const array2 = [10, 1, 2, 5, 6];
 function showElement(element, index, array) {
   return console.log(element);
 }
-const voidConstant = array1.forEach(showElement);
+array1.forEach(showElement);
 
 
 //esercizio2 fare un console.log() di ogni elemento, dopo un set timeout di (elemento * index)
